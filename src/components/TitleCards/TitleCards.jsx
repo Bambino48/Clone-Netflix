@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./TitleCards.css";
 import cards_data from "../../assets/cards/Cards_data";
 
+// eslint-disable-next-line no-unused-vars
 const TitleCards = ({title, category}) => {
 
     const cardsRef = useRef();
