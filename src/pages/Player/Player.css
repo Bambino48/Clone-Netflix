@@ -1,0 +1,32 @@
+.player {
+    position: relative; /* Ajouté */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 10; /* Pour s'assurer que l'image est au-dessus de l'iframe */
+}
+
+.player iframe {
+    border-radius: 10px;
+    width: 90%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 20px;
+}
