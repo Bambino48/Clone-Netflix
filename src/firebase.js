@@ -27,6 +27,7 @@ const db = getFirestore(app);
 const signup = async (name, email, password) => {
     try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
+// sourcery skip: use-object-destructuring
         const user = res.user;
         await addDoc(collection(db, "users"), {
             uid: user.uid,
