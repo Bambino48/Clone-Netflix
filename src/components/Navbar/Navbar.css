@@ -77,6 +77,15 @@
 .nav-dark {
     background-color: #141414;
 }
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar ul li a.active {
+    border-bottom: 2px solid #e50914; /* rouge Netflix */
+}
 @media (max-width:800px) {
     .navbar {
         padding: 20px 4%;

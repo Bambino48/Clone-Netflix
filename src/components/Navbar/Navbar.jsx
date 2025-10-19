@@ -6,6 +6,7 @@ import bell_icon from "../../assets/bell_icon.svg";
 import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 import { logout } from "../../firebase";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -26,12 +27,12 @@ const Navbar = () => {
             <div className="navbar-left">
                 <img src={logo} alt="Logo" />
                 <ul>
-                    <li>Home</li>
-                    <li>Tv Shows</li>
-                    <li>Movies</li>
-                    <li>New & Popular</li>
-                    <li>My List</li>
-                    <li>Browse by languages</li>
+                    <li><NavLink to="/" end>Home</NavLink></li>
+                    <li><NavLink to="/tv-shows">Tv Shows</NavLink></li>
+                    <li><NavLink to="/movies">Movies</NavLink></li>
+                    <li><NavLink to="/new-and-popular">New & Popular</NavLink></li>
+                    <li><NavLink to="/my-list">My List</NavLink></li>
+                    <li><NavLink to="/browse-by-languages">Browse by languages</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-right">

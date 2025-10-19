@@ -1,0 +1,66 @@
+.mylist-page {
+    background-color: #141414;
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 100px;
+    /* espace sous la navbar */
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.mylist-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.mylist-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mylist-card {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mylist-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mylist-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.mylist-card p {
+    margin-top: 8px;
+    color: #ccc;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.empty-list {
+    color: #bbb;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 1.1rem;
+}
+
+.suggestions {
+    margin-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mylist-page {
+        padding-top: 80px;
+    }
+
+    .mylist-card {
+        width: 45%;
+    }
+}

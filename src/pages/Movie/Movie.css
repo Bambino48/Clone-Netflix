@@ -1,0 +1,62 @@
+/* Style général de la page Movies */
+.movies-page {
+    background-color: #141414;
+    /* fond sombre comme Netflix */
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 100px;
+    /* espace sous la navbar */
+    padding-left: 4%;
+    padding-right: 4%;
+    overflow-x: hidden;
+}
+
+/* Titre des sections ("Popular Movies", etc.) */
+.movies-page h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-top: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* Conteneur des cards (hérité de TitleCards, mais ajusté ici) */
+.movies-page .title-cards {
+    margin-bottom: 50px;
+}
+
+/* Ajustement des images dans les cartes */
+.movies-page .card-list img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movies-page .card-list img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Texte sous chaque image */
+.movies-page .card-list p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .movies-page {
+        padding-top: 80px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .movies-page h2 {
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+
+    .movies-page .card-list p {
+        font-size: 0.85rem;
+    }
+}

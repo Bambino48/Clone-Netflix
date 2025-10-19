@@ -1,0 +1,62 @@
+/* Page TV Shows */
+.tvshows-page {
+    background-color: #141414;
+    /* fond Netflix */
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 100px;
+    /* espace sous la navbar */
+    padding-left: 4%;
+    padding-right: 4%;
+    overflow-x: hidden;
+}
+
+/* Titres de sections (Popular, Top Rated, etc.) */
+.tvshows-page h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-top: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* Espacement entre les blocs de cartes */
+.tvshows-page .title-cards {
+    margin-bottom: 50px;
+}
+
+/* Style des images */
+.tvshows-page .card-list img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tvshows-page .card-list img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Texte sous les images */
+.tvshows-page .card-list p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Responsivité mobile */
+@media (max-width: 768px) {
+    .tvshows-page {
+        padding-top: 80px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .tvshows-page h2 {
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+
+    .tvshows-page .card-list p {
+        font-size: 0.85rem;
+    }
+}
