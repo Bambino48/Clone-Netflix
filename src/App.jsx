@@ -1,8 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./firebase.js";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -16,23 +14,22 @@ import TvShows from "./pages/TvShows/TvShows";
 import NewAndPopular from "./pages/NewAndPopular.jsx/NewAndPopular";
 import MyList from "./pages/MyList/MyList";
 import BrowseByLanguages from "./pages/BrowseByLanguages/BrowseByLanguages";
+import PlayerWrapper from "./components/PlayerWrapper/PlayerWrapper";
 
 const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        console.log("✅ Logged In");
-        navigate('/');
-      } else {
-        console.log("🚪 Logged Out");
-        navigate('/login');
-      }
-    });
+    // Vérifie l'utilisateur dans localStorage
+    const email = localStorage.getItem("userEmail");
 
-    // Nettoyage du listener Firebase lors du démontage du composant
-    return () => unsubscribe();
+    if (email) {
+      console.log("✅ Logged In");
+      navigate('/');
+    } else {
+      console.log("🚪 Logged Out");
+      navigate('/login');
+    }
   }, []);
 
   return (
@@ -54,7 +51,7 @@ const App = () => {
         <Route path="/browse-by-languages" element={<BrowseByLanguages />} />
 
         {/* Page du lecteur vidéo */}
-        <Route path="/player/:type/:id" element={<Player />} />
+        <Route path="/player/:type/:id" element={<PlayerWrapper />} />
 
         {/* Page de connexion */}
         <Route path="/login" element={<Login />} />
