@@ -12,7 +12,7 @@ const PaymentPage = () => {
         }
 
         try {
-            const response = await fetch("http://localhost/netflix-backend/create_payment.php", {
+            const response = await fetch("https://sp-p6.com/bamba/netflix-backend/create_payment.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 // 🔹 URL de base de ton backend local XAMPP
-const API_URL = "http://localhost/netflix-backend";
+const API_URL = "https://sp-p6.com/bamba/netflix-backend";
 
 /**
  * Inscription d'un nouvel utilisateur
