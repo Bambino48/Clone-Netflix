@@ -19,15 +19,23 @@ const Login = () => {
         let success = false;
 
         if (signState === "Sign In") {
+            // 🔹 Connexion normale
             success = await login(email, password);
+            setLoading(false);
+
+            if (success) {
+                navigate("/"); // ✅ Redirection vers la page d'accueil après connexion
+            }
         } else {
+            // 🔹 Inscription
             success = await signup(name, email, password);
-        }
+            setLoading(false);
 
-        setLoading(false);
-
-        if (success) {
-            navigate("/"); // 🔹 Redirection vers home après succès
+            if (success) {
+                alert("Inscription réussie ! Veuillez maintenant vous connecter.");
+                setSignState("Sign In"); // ✅ Bascule vers le formulaire de connexion
+                navigate("/login"); // ✅ Redirige vers la page login
+            }
         }
     };
 
@@ -85,7 +93,7 @@ const Login = () => {
                         </p>
                     ) : (
                         <p>
-                            Already have account?{" "}
+                            Already have an account?{" "}
                             <span onClick={() => setSignState("Sign In")}>
                                 Sign In Now
                             </span>
