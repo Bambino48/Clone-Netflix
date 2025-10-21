@@ -8,7 +8,7 @@ const API_URL = "https://sp-p6.com/bamba/netflix-backend";
  */
 export const signup = async (name, email, password) => {
     try {
-        const res = await fetch(`${API_URL}/register.php`, {
+        const res = await fetch("https://sp-p6.com/bamba/netflix-backend/register.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, password })
@@ -34,7 +34,7 @@ export const signup = async (name, email, password) => {
  */
 export const login = async (email, password) => {
     try {
-        const res = await fetch(`${API_URL}/login.php`, {
+        const res = await fetch("https://sp-p6.com/bamba/netflix-backend/login.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })
